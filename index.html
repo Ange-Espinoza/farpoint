@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>farpoint. — game development agency</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="nav">
+    <a href="#" class="nav-logo" aria-label="Farpoint">
+      <svg viewBox="0 0 583.22 93.92" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#E6FF00" d="M120.8,33.25l-10.98-6.34-10.98-6.34-10.98-6.34L65.89,1.55l-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,2.32,1.34c-.17,.58-.25,1.18-.25,1.79,0,5.28,6.45,9.55,14.41,9.55s14.41-4.28,14.41-9.55-6.45-9.55-14.41-9.55c-1.65,0-3.24,.19-4.72,.52l-.77-.45-10.98-6.34,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-10.98-6.34-10.98-6.34-10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17-10.98-6.34Z"/>
+        <path class="wm" fill="#fdfdfc" d="M165.26,35.36h-8.65v-13.57h8.65v-5.04c0-11.28,9.2-16.75,20.36-16.75,1.86,0,4.16,.11,9.85,.99V13.79l-6.79-.11c-6.68,0-8.65,1.75-8.65,6.57v1.53h15.44v13.57h-15.44v41.49h-14.78V35.36Z"/>
+        <path class="wm" fill="#fdfdfc" d="M198.86,59.77c-.55-16.2,14.67-18.28,31.96-18.39h7.01v-.55c0-6.13-2.85-7.44-10.62-7.44-5.15,0-10.62,.55-10.73,6.57h-15c.11-15.33,11.49-20.14,25.72-20.14,17.73,0,25.07,7.44,25.07,21.35v35.69h-14.34v-6.24c-3.83,3.5-9.63,6.46-17.51,6.46-12.92,0-21.24-5.58-21.57-17.3Zm38.97-3.61v-4.38l-7.12,.33c-13.36,.44-17.41,2.63-17.41,7.22,0,3.72,2.96,6.02,9.96,6.02,8.65,0,14.56-3.5,14.56-9.2Z"/>
+        <path class="wm" fill="#fdfdfc" d="M260.93,20.36h14.67v5.91c4.6-5.25,14.78-6.13,22.66-4.49l-2.08,13.79c-9.41-2.41-20.58-.55-20.58,9.2v32.07h-14.67V20.36Z"/>
+        <path class="wm" fill="#fdfdfc" d="M304.83,20.36h14.67v6.13c2.85-4.49,9.41-6.68,15.87-6.68,17.62,0,27.91,11.71,27.91,28.9s-11.17,29.34-28.9,29.34c-5.58,0-10.84-1.42-14.89-4.93v20.8h-14.67V20.36Zm43.35,28.35c0-10.62-5.69-15.11-13.79-15.11-9.74,0-15,5.36-15,13.03v4.05c0,8.54,4.38,13.46,14.23,13.46,9.3,0,14.56-4.71,14.56-15.43Z"/>
+        <path class="wm" fill="#fdfdfc" d="M368.99,48.93c0-18.17,12.26-29.12,30.54-29.12s30.1,10.95,30.1,29.01-11.93,29.23-30.43,29.23-30.21-11.17-30.21-29.12Zm46.09-.11c0-9.3-5.8-15.22-15.65-15.22s-15.76,5.91-15.76,15.33,5.69,15.22,15.65,15.22,15.76-5.91,15.76-15.33Z"/>
+        <path class="wm" fill="#fdfdfc" d="M437.3,.22h14.78V15.11h-14.78V.22Zm.11,21.57h14.67v55.06h-14.67V21.78Z"/>
+        <path class="wm" fill="#fdfdfc" d="M459.74,20.36h14.67v6.35c2.96-4.05,10.29-6.68,16.42-6.9,14.78-.88,22.66,7.77,22.66,21.35v35.69h-14.56V44.66c0-7.01-1.75-10.95-9.41-10.95-6.02,0-15.11,2.85-15.11,10.18v32.95h-14.67V20.36Z"/>
+        <path class="wm" fill="#fdfdfc" d="M526.73,58.24v-22.66h-8.65v-13.46h8.65V3.28h14.67V22.11h16.42v13.46h-16.42v23.43c0,7.55,9.2,5.04,15.33,3.83l3.61,11.93c-7.33,2.41-10.73,3.07-15,3.07-13.9,0-18.17-8.32-18.61-19.59Z"/>
+        <circle fill="#E6FF00" cx="576.05" cy="72.25" r="7.17"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <canvas id="stars-canvas"></canvas>
+
+    <div class="hero-content">
+
+      <!-- Logo animado -->
+      <div class="hero-logo-wrap">
+        <svg viewBox="0 0 583.22 93.92" xmlns="http://www.w3.org/2000/svg">
+          <!-- Trazo se dibuja primero -->
+          <path class="li-stroke" d="M120.8,33.25l-10.98-6.34-10.98-6.34-10.98-6.34L65.89,1.55l-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,2.32,1.34c-.17,.58-.25,1.18-.25,1.79,0,5.28,6.45,9.55,14.41,9.55s14.41-4.28,14.41-9.55-6.45-9.55-14.41-9.55c-1.65,0-3.24,.19-4.72,.52l-.77-.45-10.98-6.34,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-10.98-6.34-10.98-6.34-10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17-10.98-6.34Z"/>
+          <!-- Luego el fill inunda la forma -->
+          <path class="li-fill" d="M120.8,33.25l-10.98-6.34-10.98-6.34-10.98-6.34L65.89,1.55l-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,2.32,1.34c-.17,.58-.25,1.18-.25,1.79,0,5.28,6.45,9.55,14.41,9.55s14.41-4.28,14.41-9.55-6.45-9.55-14.41-9.55c-1.65,0-3.24,.19-4.72,.52l-.77-.45-10.98-6.34,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-10.98-6.34-10.98-6.34-10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17-10.98-6.34Z"/>
+          <!-- Punto ácido -->
+          <circle class="li-dot" cx="576.05" cy="72.25" r="7.17"/>
+          <!-- Wordmark con stagger por letra -->
+          <path class="lw" style="--d:1.4s"  fill="#fdfdfc" d="M165.26,35.36h-8.65v-13.57h8.65v-5.04c0-11.28,9.2-16.75,20.36-16.75,1.86,0,4.16,.11,9.85,.99V13.79l-6.79-.11c-6.68,0-8.65,1.75-8.65,6.57v1.53h15.44v13.57h-15.44v41.49h-14.78V35.36Z"/>
+          <path class="lw" style="--d:1.52s" fill="#fdfdfc" d="M198.86,59.77c-.55-16.2,14.67-18.28,31.96-18.39h7.01v-.55c0-6.13-2.85-7.44-10.62-7.44-5.15,0-10.62,.55-10.73,6.57h-15c.11-15.33,11.49-20.14,25.72-20.14,17.73,0,25.07,7.44,25.07,21.35v35.69h-14.34v-6.24c-3.83,3.5-9.63,6.46-17.51,6.46-12.92,0-21.24-5.58-21.57-17.3Zm38.97-3.61v-4.38l-7.12,.33c-13.36,.44-17.41,2.63-17.41,7.22,0,3.72,2.96,6.02,9.96,6.02,8.65,0,14.56-3.5,14.56-9.2Z"/>
+          <path class="lw" style="--d:1.64s" fill="#fdfdfc" d="M260.93,20.36h14.67v5.91c4.6-5.25,14.78-6.13,22.66-4.49l-2.08,13.79c-9.41-2.41-20.58-.55-20.58,9.2v32.07h-14.67V20.36Z"/>
+          <path class="lw" style="--d:1.76s" fill="#fdfdfc" d="M304.83,20.36h14.67v6.13c2.85-4.49,9.41-6.68,15.87-6.68,17.62,0,27.91,11.71,27.91,28.9s-11.17,29.34-28.9,29.34c-5.58,0-10.84-1.42-14.89-4.93v20.8h-14.67V20.36Zm43.35,28.35c0-10.62-5.69-15.11-13.79-15.11-9.74,0-15,5.36-15,13.03v4.05c0,8.54,4.38,13.46,14.23,13.46,9.3,0,14.56-4.71,14.56-15.43Z"/>
+          <path class="lw" style="--d:1.88s" fill="#fdfdfc" d="M368.99,48.93c0-18.17,12.26-29.12,30.54-29.12s30.1,10.95,30.1,29.01-11.93,29.23-30.43,29.23-30.21-11.17-30.21-29.12Zm46.09-.11c0-9.3-5.8-15.22-15.65-15.22s-15.76,5.91-15.76,15.33,5.69,15.22,15.65,15.22,15.76-5.91,15.76-15.33Z"/>
+          <path class="lw" style="--d:2.0s"  fill="#fdfdfc" d="M437.3,.22h14.78V15.11h-14.78V.22Zm.11,21.57h14.67v55.06h-14.67V21.78Z"/>
+          <path class="lw" style="--d:2.12s" fill="#fdfdfc" d="M459.74,20.36h14.67v6.35c2.96-4.05,10.29-6.68,16.42-6.9,14.78-.88,22.66,7.77,22.66,21.35v35.69h-14.56V44.66c0-7.01-1.75-10.95-9.41-10.95-6.02,0-15.11,2.85-15.11,10.18v32.95h-14.67V20.36Z"/>
+          <path class="lw" style="--d:2.24s" fill="#fdfdfc" d="M526.73,58.24v-22.66h-8.65v-13.46h8.65V3.28h14.67V22.11h16.42v13.46h-16.42v23.43c0,7.55,9.2,5.04,15.33,3.83l3.61,11.93c-7.33,2.41-10.73,3.07-15,3.07-13.9,0-18.17-8.32-18.61-19.59Z"/>
+        </svg>
+      </div>
+
+      <p class="hero-eyebrow">Chilean game development agency</p>
+
+      <div class="hero-bottom">
+        <p class="hero-tagline">
+          Building games around your vision —<br>
+          <em>with clarity, consistency, and fair pricing.</em>
+        </p>
+        <a href="#services" class="hero-cta">
+          Work with us
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div>
+        <p class="section-label">What we do</p>
+        <h2 class="services-title">Our<br><em>services.</em></h2>
+      </div>
+      <p class="services-desc">End-to-end game production from a team that knows how to ship. We work with studios, publishers, and independent creators.</p>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="service-info">
+        <p class="service-num">01</p>
+        <h3 class="service-name">co-productions.</h3>
+        <p class="service-text">We are open to explore co-productions and co-investments in interesting projects. We act as a long-term partner that shares the risks — and the benefits — of the game.</p>
+        <div class="service-tags">
+          <span class="tag">Partnership</span>
+          <span class="tag">Co-investment</span>
+          <span class="tag">Long-term</span>
+        </div>
+      </div>
+      <div class="service-visual">
+        <img src="https://farpoint.dev/media/shrinking.gif" alt="co-productions" onerror="this.style.display='none'">
+        <div class="svc-placeholder">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="38" stroke="#E6FF00" stroke-width="1"/>
+            <path d="M50 12L88 50L50 88L12 50Z" stroke="#E6FF00" stroke-width="1" fill="none"/>
+            <circle cx="50" cy="50" r="7" fill="#E6FF00" opacity=".6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="service-info">
+        <p class="service-num">02</p>
+        <h3 class="service-name">game development.</h3>
+        <p class="service-text">End-to-end development at affordable rates. Experience across mobile hyper-casuals, deck-builders, and VR games. Full Unity pipeline for PC and Android.</p>
+        <div class="service-tags">
+          <span class="tag">Unity</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">VR</span>
+          <span class="tag">PC &amp; Android</span>
+        </div>
+      </div>
+      <div class="service-visual">
+        <img src="https://farpoint.dev/media/exampleCode.png" alt="game development" onerror="this.style.display='none'">
+        <div class="svc-placeholder">
+          <svg viewBox="0 0 100 100" fill="none">
+            <rect x="12" y="22" width="76" height="56" rx="4" stroke="#E6FF00" stroke-width="1"/>
+            <path d="M25 52l14-16 12 18 10-12 14 10" stroke="#E6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="service-info">
+        <p class="service-num">03</p>
+        <h3 class="service-name">art outsourcing.</h3>
+        <p class="service-text">Full-cycle game art production covering storyboards, concept art, animation, and 2D/3D design for games, VR/AR apps, simulations, and trailers. We also create Steam capsules.</p>
+        <div class="service-tags">
+          <span class="tag">Concept art</span>
+          <span class="tag">2D / 3D</span>
+          <span class="tag">Animation</span>
+          <span class="tag">Steam capsules</span>
+        </div>
+      </div>
+      <div class="service-visual">
+        <img src="https://farpoint.dev/media/outsourcing.png" alt="art outsourcing" onerror="this.style.display='none'">
+        <div class="svc-placeholder">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M15 78Q30 25 50 48Q70 72 85 22" stroke="#E6FF00" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="48" r="3.5" fill="#E6FF00"/>
+            <circle cx="15" cy="78" r="2.5" fill="#E6FF00" opacity=".5"/>
+            <circle cx="85" cy="22" r="2.5" fill="#E6FF00" opacity=".5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <p class="section-label">About us</p>
+        <p class="about-quote">"From the <em>far south</em>, we collaborate globally."</p>
+        <div class="about-origin">
+          <span style="font-size:20px;line-height:1">🇨🇱</span>
+          <span>Santiago, Chile</span>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <p class="about-text">Our role is to <strong>simplify production</strong> — we organize scope, milestones, and collaboration so ideas can turn into solid, deliverable game content without unnecessary friction.</p>
+        <p class="about-text">We support studios, publishers, and independent creators with art and production services adapted to each brief. We also develop our own video games with Unity for PC and Android.</p>
+        <p class="about-text"><strong>Structured teamwork, practical execution, reliable delivery.</strong> That's the Farpoint way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TEAM ══ -->
+  <section id="team">
+    <div class="team-header reveal">
+      <p class="section-label">The people</p>
+      <h2 class="team-title">Our<br>team.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img src="https://farpoint.dev/media/vicente.png" alt="Vicente Martinez" class="team-photo">
+        </div>
+        <div class="team-info">
+          <p class="team-name">Vicente Martinez.</p>
+          <p class="team-role">Capable and adaptable, always looking for a challenge and keeping the big picture in mind.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay: 0.12s">
+        <div class="team-photo-wrap">
+          <img src="https://farpoint.dev/media/pablito.jpeg" alt="Pablo Barría" class="team-photo">
+        </div>
+        <div class="team-info">
+          <p class="team-name">Pablo Barría.</p>
+          <p class="team-role">Co-producer and creative partner. Open to explore co-investments and long-term collaborations.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay: 0.24s">
+        <div class="team-photo-wrap">
+          <img src="https://farpoint.dev/media/pablo.png" alt="Pablo" class="team-photo">
+        </div>
+        <div class="team-info">
+          <p class="team-name">Pablo.</p>
+          <p class="team-role">Builder, thinker, collaborator. Invested in creating games that ship and matter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <p class="section-label">Get in touch</p>
+        <h2 class="contact-title">Let's<br>build <em>something.</em></h2>
+      </div>
+      <form class="contact-form reveal" onsubmit="return false;">
+        <div class="form-field">
+          <label>First name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label>Subject</label>
+          <textarea placeholder="Tell us about your project..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Send message
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <a href="#" class="footer-logo" aria-label="Farpoint">
+      <svg viewBox="0 0 583.22 93.92" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#E6FF00" d="M120.8,33.25l-10.98-6.34-10.98-6.34-10.98-6.34L65.89,1.55l-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,2.32,1.34c-.17,.58-.25,1.18-.25,1.79,0,5.28,6.45,9.55,14.41,9.55s14.41-4.28,14.41-9.55-6.45-9.55-14.41-9.55c-1.65,0-3.24,.19-4.72,.52l-.77-.45-10.98-6.34,5.49-3.17,5.49-3.17,5.49-3.17,10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-5.49,3.17-10.98-6.34-10.98-6.34-10.98,6.34,10.98,6.34,10.98,6.34,10.98,6.34,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17,5.49-3.17-10.98-6.34Z"/>
+        <path fill="#fdfdfc" opacity=".35" d="M165.26,35.36h-8.65v-13.57h8.65v-5.04c0-11.28,9.2-16.75,20.36-16.75,1.86,0,4.16,.11,9.85,.99V13.79l-6.79-.11c-6.68,0-8.65,1.75-8.65,6.57v1.53h15.44v13.57h-15.44v41.49h-14.78V35.36Z"/>
+        <path fill="#fdfdfc" opacity=".35" d="M526.73,58.24v-22.66h-8.65v-13.46h8.65V3.28h14.67V22.11h16.42v13.46h-16.42v23.43c0,7.55,9.2,5.04,15.33,3.83l3.61,11.93c-7.33,2.41-10.73,3.07-15,3.07-13.9,0-18.17-8.32-18.61-19.59Z"/>
+        <circle fill="#E6FF00" cx="576.05" cy="72.25" r="7.17" opacity=".35"/>
+      </svg>
+    </a>
+    <ul class="footer-links">
+      <li><a href="#">Itch.io</a></li>
+      <li><a href="#">Discord</a></li>
+      <li><a href="#">X / Twitter</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Farpoint. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+
+</body>
+</html>
