@@ -97,23 +97,25 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 28px 48px;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0) 100%);
   transition: background 0.4s, padding 0.3s;
 }
 
 nav.scrolled {
-  background: rgba(8, 8, 8, 0.93);
-  backdrop-filter: blur(12px);
+   background: rgba(8,8,8,0.6);
+  backdrop-filter: blur(7px);
   padding: 18px 48px;
   border-bottom: 1px solid var(--border);
 }
 
 .nav-logo {
-  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   height: 22px;
 }
 
-.nav-logo svg {
+.nav-logo img {
   height: 22px;
   width: auto;
   display: block;
@@ -800,7 +802,7 @@ footer {
 
 .footer-logo:hover { opacity: 1; }
 
-.footer-logo svg {
+.footer-logo img {
   height: 18px;
   width: auto;
   display: block;
