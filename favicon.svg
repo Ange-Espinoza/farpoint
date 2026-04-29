@@ -2,9 +2,6 @@
   <defs>
     <style>
       .cls-1 { fill: #e6ff00; }
-      @media (prefers-color-scheme: light) {
-        .cls-1 { fill: #0a0a0a; }
-      }
     </style>
   </defs>
   <g id="Capa_1-2">
